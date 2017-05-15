@@ -1,0 +1,18 @@
+[{
+    "name": "granny_app",
+    "image": "${registry_url}:latest",
+    "cpu": 10,
+    "memory": 512,
+    "links": [],
+    "portMappings": [{
+        "containerPort": 8080,
+        "hostPort": 8080,
+        "protocol": "tcp"
+    }],
+    "essential": true,
+    "entryPoint": [],
+    "command": [],
+    "environment": [],
+    "mountPoints": [],
+    "volumesFrom": []
+}]
