@@ -1,0 +1,19 @@
+---
+- hosts: localhost
+  gather_facts: no
+
+  tasks:
+   - set_fact: database_url="{{ lookup('env','DATABASE_URL') }}"
+   - set_fact: docker_registry="{{ lookup('env','DOCKER_REGISTRY_URL') }}"
+
+   - name: Template context.xml file
+     template:
+       src: ./context.xml.j2
+       dest: ./context.xml
+
+   - name: Template granny_app.json file
+     template:
+       src: ./granny_app.json.j2
+       dest: ./granny_app.json
+    
+
