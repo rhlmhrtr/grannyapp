@@ -11,6 +11,14 @@
             "hostPort": 8080,
             "protocol": "tcp"
         }],
+    "logConfiguration": {
+        "logDriver": "awslogs",
+        "options": {
+            "awslogs-group": "granny_app",
+            "awslogs-region": "us-west-1",
+            "awslogs-stream-prefix": "grannyapp"
+        }
+    },  
         "essential": true,
         "entryPoint": [],
         "command": [],
