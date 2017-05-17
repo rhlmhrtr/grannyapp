@@ -1,7 +1,6 @@
 {
   "Version": "2012-10-17",
-  "Statement": [
-    {
+  "Statement": [{
       "Effect": "Allow",
       "Action": [
         "ecs:CreateCluster",
@@ -12,12 +11,33 @@
         "ecs:StartTelemetrySession",
         "ecs:Submit*",
         "ecs:StartTask",
-         "ecr:BatchCheckLayerAvailability",
-         "ecr:BatchGetImage",
-         "ecr:GetDownloadUrlForLayer",
-         "ecr:GetAuthorizationToken"
+        "ecr:BatchCheckLayerAvailability",
+        "ecr:BatchGetImage",
+        "ecr:GetDownloadUrlForLayer",
+        "ecr:GetAuthorizationToken",
+        "ecr:BatchCheckLayerAvailability",
+        "ecr:GetDownloadUrlForLayer",
+        "ecr:GetRepositoryPolicy",
+        "ecr:DescribeRepositories",
+        "ecr:ListImages",
+        "ecr:DescribeImages",
+        "ecr:BatchGetImage",
+        "ecr:InitiateLayerUpload",
+        "ecr:UploadLayerPart",
+        "ecr:CompleteLayerUpload",
+        "ecr:PutImage"
       ],
       "Resource": "*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "logs:CreateLogGroup",
+        "logs:CreateLogStream",
+        "logs:PutLogEvents",
+        "logs:DescribeLogStreams"
+      ],
+      "Resource": "arn:aws:logs:*:*:*"
     }
   ]
 }

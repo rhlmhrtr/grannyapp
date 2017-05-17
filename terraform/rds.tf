@@ -20,7 +20,7 @@ resource "aws_rds_cluster_instance" "granny_app_aurora" {
 
 resource "aws_db_subnet_group" "private_db_subnet" {
   name       = "granny_aurora_subnet"
-  subnet_ids = ["${split(",", var.private_subnets)}"]
+  subnet_ids = ["${split(",", var.subnets)}"]
 
   tags {
     Name = "Granny App Subnet Group"

@@ -54,6 +54,8 @@ variable "s3_bucket_name"{
   default = "default"
 }
 
+variable "subnets"{
+}
 
 
 /* ECS optimized AMIs per region */
@@ -71,3 +73,10 @@ variable "amis" {
 variable "instance_type" {
   default = "t2.micro"
 }
+
+variable "min_count" {
+}
+
+variable "max_count" {
+}
+

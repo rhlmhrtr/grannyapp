@@ -27,7 +27,7 @@ resource "template_file" "task_definition" {
   template = "${file("${path.module}/task-definitions/granny_app.json")}"
 
   vars {
-    registry_url = "${var.registry_url}"
+    registry_url = "${aws_ecr_repository.granny_app.repository_url}"
   }
 }
 
